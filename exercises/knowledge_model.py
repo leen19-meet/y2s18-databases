@@ -20,15 +20,5 @@ class Knowledge(Base):
 	rating = Column(Integer)
 
 	def __repr__(self):
-		return("Id: {}\n"
-				"Article name:{}\n"
-				"Topic:{}\n"
-				"Rating:{}\n".format(
-					self.id, self.artName, self.topic, self.rating)
+		return "Id: {}\n"+"Article name:{}\nTopic:{}\n"+"Rating:{}\n".format(self.id, self.artName, self.topic, self.rating)
 				
-
-My_knowledge = Knowledge(artName= "music", topic="Music affecting the brain", rating= 9)
-My_knowledge2 = Knowledge(artName= "chemistry", topic="It's all about chemistry", rating= 10)
-My_knowledge3 = Knowledge(artName= "politics", topic="politics on a daily basis  ", rating= 9)
-
-	

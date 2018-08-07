@@ -45,17 +45,27 @@ def delete_all_articles():
 	session.commit()
 
 def edit_rating(updated_rating, article_title):
-	knowledge = session.query(Knowledge).filter_by(article_name = article_title).first()
+	knowledge = session.query(Knowledge).filter_by(artName = article_title).first()
 	knowledge.rating  = updated_rating 
 	session.commit()
 
-
-
-
-def edit_article_rating():
+def edit_article_rating(threshold):
 	pass
 
+My_knowledge = Knowledge(artName= "music", topic="Music affecting the brain", rating= 9)
+My_knowledge2 = Knowledge(artName= "chemistry", topic="It's all about chemistry", rating= 10)
+My_knowledge3 = Knowledge(artName= "politics", topic="politics on a daily basis  ", rating= 9)
 
-Name  | Year
-Subhi | 2001
-Ahmad | 1991
+
+add_article("music", "Music affecting the brain", 9 )
+edit_rating(7,"music")
+print(query_all_articles())
+(query_article_by_topic("The history of dancing"))
+delete_article_by_topic("The history of dancing")
+delete_all_articles()
+
+
+
+
+
+
